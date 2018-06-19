@@ -25,11 +25,6 @@
             <!-- /.box-header -->
 	            <div class="box-body">
 	              <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-			              	<div class="row">
-			              		<div class="col-sm-6">			
-			              		</div>
-			              		<div class="col-sm-6"></div>
-			              	</div>
 		              	<div class="row">
 		              		<div class="col-sm-12">
 				              	<table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
@@ -37,6 +32,7 @@
 						                <tr role="row">
 						                	<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Id</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Nome</th>
+						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">CNPJ</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Classe</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Situação</th>
 						                	
@@ -50,6 +46,7 @@
 										<tr role="row" class="odd">
 											<td class="sorting_1">{{ $registro->id }}</td>
 											<td>{{ $registro->nome }}</td>
+											<td>{{ $registro->cnpj }}</td>
 											<td>{{ $registro->classe->classe }}</td>
 											<td>{{ $registro->situacao->situacao }}</td>
 											
@@ -66,20 +63,16 @@
 					                	
 					                </tfoot>
 				              	</table>
-			              	<!-- BOTAO ADICIONAR-->
-			              	<div>
-								<a class="btn btn-primary" href="{{route('admin.clientes.adicionar')}}">Adicionar</a>
-							</div>
-							<!-- /.BOTAO ADICIONAR-->
+			              	
 			          	</div>
 			      	</div>
 	      	
 		      		<div class="row">
-		      			<div class="col-sm-5">
+		      			<div>
 		   	  				<div class="dataTables_info" id="example2_info" role="status" aria-live="polite"></div>
 			      		</div>
 			      		@if($paginacao)
-			      		<div align="center" class="col-sm-7">
+			      		<div align="center">
 			      			<div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
 			      				{!! $registros->links() !!}
 			      			</div>

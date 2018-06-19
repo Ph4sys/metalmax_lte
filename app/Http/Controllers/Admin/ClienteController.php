@@ -82,10 +82,21 @@ class ClienteController extends Controller
             ];
         }
         
+        If($busca['cnpj'] != ''){
+            $testecnpj = [
+                ['cnpj','like','%'.$busca['cnpj'].'%']
+            ];
+        }else{
+            $testecnpj = [
+                ['cnpj','<>',null]
+            ];
+        }
+
         $registros = Cliente::where($testeClasse)
                     ->where($testeSituacao)
                     ->where($testeCidade)
                     ->where($testeNome)
+                    ->where($testecnpj)
                     ->orderBy('nome')->get();
         
         return view('admin.clientes.busca', compact('registros','busca','classes','situacoes','cidades','paginacao'));
