@@ -75,9 +75,9 @@ class HistoricoContatoController extends Controller
     {
         $hcontato = HistoricoContato::find($id);
         $hcontato->update($request->all());
-
         $idcontato = $hcontato->contato_id;
 
+        //dd($hcontato);
        /* $contato->nome = $dados['nome'];
         $contato->email = $dados['email'];
         $contato->telefone = $dados['telefone'];

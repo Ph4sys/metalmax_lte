@@ -61,8 +61,7 @@
 								<td>{{ $registro->email }}</td>
 								<td>{{ $registro->telefone->tipo }}</td>
 								<td>{{ $registro->telefone->numero }}</td>
-								
-								
+																
 								<td>
 								<a class="fa-btn label label-success" href="{{route('admin.contatos.editar',$registro->id)}}">Editar</a>
 								<a class="fa-btn label label-danger" href="javascript: if(confirm('Deletar esse registro?')){ window.location.href = '{{ route('admin.contatos.deletar',$registro->id) }}' }">Deletar</a>

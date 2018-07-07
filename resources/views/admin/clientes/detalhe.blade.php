@@ -51,6 +51,9 @@
 				          	<div class="col-sm-3">
 				          		<b>Cidade: </b>{{ $cliente->cidade->nome}}-{{ $cliente->estado->sigla}}
 				          	</div>
+							<div class="col-sm-3">
+				          		<b>Crédito: </b>{{ $cliente->credito}}
+				          	</div>
 			  			</div>
 			  	
 			      		<div class="row">
