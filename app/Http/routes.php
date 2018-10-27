@@ -27,9 +27,7 @@ Route::group(['middleware'=>'auth'], function(){
 
 	Route::get('/admin/login/sair',['as'=>'admin.login.sair', 'uses'=>'Admin\UsuarioController@sair']);
 
-	Route::get('/admin',['as'=>'admin.principal', function(){
-		return view('admin.principal.index');
-	}]);
+	Route::get('/admin/info',['as'=>'admin.principal', 'uses'=>'Admin\infoController@index']);
 
 	Route::get('/admin/usuarios',['as'=>'admin.usuarios', 'uses'=>'Admin\UsuarioController@index']);
 	Route::get('/admin/usuarios/adicionar',['as'=>'admin.usuarios.adicionar', 'uses'=>'Admin\UsuarioController@adicionar']);
@@ -134,5 +132,6 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::put('/admin/situacoes_pedido/atualizar/{id}',['as'=>'admin.situacoes_pedido.atualizar', 'uses'=>'Admin\SituacaoPedidoController@atualizar']);
 	Route::get('/admin/situacoes_pedido/deletar/{id}',['as'=>'admin.situacoes_pedido.deletar', 'uses'=>'Admin\SituacaoPedidoController@deletar']);
 
+	Route::get('/admin/pedidos/naoConfirmados',['as'=>'admin.pedidos.naoConfirmados', 'uses'=>'Admin\PedidoController@naoConfirmados']);
 });
 

@@ -155,9 +155,10 @@ class PedidoController extends Controller
 
         return redirect()->route('admin.hcontatos', $pedido->contato_id);
     }
+    
     //Function
 
-    public static function getNextPedidoNumber()
+    private static function getNextPedidoNumber()
     {
         // Get the last created order
         $lastNumber = Pedido::orderBy('created_at', 'desc')->first();
