@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container">
-		<h2>PINRCIPAL</h2>
+		<h2>METALMAX - LIGAS METALICAS</h2>
 		</form>
 	</div>
 @endsection

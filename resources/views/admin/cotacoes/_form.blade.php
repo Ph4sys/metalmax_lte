@@ -38,8 +38,8 @@
 		        				value="{{ isset($item->quantidade) ? $item->quantidade : '' }}"></td>
 					    	<td>
 					    		<select name="dados[].und[]" class="form-control">
-					    			<option value="pç">pç</option>
-					    			<option value="kg">kg</option>
+					    			<option value="pç" {{(isset($item->unidade) && $item->unidade == 'pç'  ? 'selected' : '')}}>pç</option>
+									<option value="kg" {{(isset($item->unidade) && $item->unidade == 'kg'  ? 'selected' : '')}}>kg</option>
 					    		</select>
 					    	</td>
 					    	<td><input type="text" name="dados[].val[]" class="dinheiro form-control"

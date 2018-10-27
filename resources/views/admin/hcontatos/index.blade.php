@@ -92,7 +92,7 @@
 		              	
 		              	<div class="col-sm-12">
 
-				          	<table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+				          	<table id="tableHContatos" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
 				                <thead>
 					                <tr role="row">
 					                	<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Id</th>
@@ -124,18 +124,7 @@
 					            </tfoot>
 								<!-- /.BOTAO ADICIONAR-->
 					        </table>
-					        
-					        <div class="row">
-				      			<div class="col-sm-5">
-				   	  				<div class="dataTables_info" id="example2_info" role="status" aria-live="polite"></div>
-					      		</div>
-					      		<div class="col-sm-7">
-					      			<div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-					      				{!! $hcontatos->links() !!}
-					      			</div>
-					      		</div>
-				      		</div>
-
+		
 						    <div>
 								<a class="btn btn-primary" href="{{route('admin.hcontatos.adicionar',$contato->id, $cliente->id)}}">Adicionar Histórico</a>
 							</div>
@@ -170,7 +159,7 @@
 		              	
 		              	<div class="col-sm-12">
 
-				          	<table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+				          	<table id="tableHCotacoes" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
 				                <thead>
 					                <tr role="row">
 					                	
@@ -201,18 +190,6 @@
 					            </tfoot>
 								<!-- /.BOTAO ADICIONAR-->
 					        </table>
-
-							<div class="row">
-				      			<div class="col-sm-5">
-				   	  				<div class="dataTables_info" id="example2_info" role="status" aria-live="polite"></div>
-					      		</div>
-					      		<div class="col-sm-7">
-					      			<div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-					      				{!! $cotacoes->links() !!}
-					      			</div>
-					      		</div>
-				      		</div>
-
 						    <div>
 								<a class="btn btn-primary" href="{{route('admin.cotacoes.adicionar',$contato->id, $cliente->id)}}">Adicionar Cotação</a>
 							</div>
@@ -247,13 +224,14 @@
 			              	
 			              	<div class="col-sm-12">
 
-					          	<table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+					          	<table id="tableHPedidos" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
 					                <thead>
 						                <tr role="row">
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Número Pedido</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Número NF</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Data Pedido</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Qtd Itens</th>
+						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">P. Confirmado</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Status</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Data atualização</th>
 						                	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nome: activate to sort column ascending">Valor Pedido</th>
@@ -267,6 +245,7 @@
 												<td>{{ $pedido->numero_nf }}</td>
 												<td>{{ $pedido->created_at }}</td>
 												<td>{{ $pedido->qtd_itens }}</td>
+												<td>{{ $pedido->confirmacao_pedido }}</td>
 												<td>{{ $pedido->situacao_pedido->situacao_pedido }}</td>
 												<td>{{ $pedido->updated_at }}</td>
 												<td>{{ $pedido->valor_pedido }}</td>
@@ -281,18 +260,7 @@
 						            </tfoot>
 									<!-- /.BOTAO ADICIONAR-->
 						        </table>
-							    
-									<div class="row">
-						      			<div class="col-sm-5">
-						   	  				<div class="dataTables_info" id="example2_info" role="status" aria-live="polite"></div>
-							      		</div>
-							      		<div class="col-sm-7">
-							      			<div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-							      				{!! $pedidos->links() !!}
-						      			</div>
-						      		</div>
-				      			</div>
-
+				
 							</div>
 						</div>
 					</div>	

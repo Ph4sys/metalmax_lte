@@ -21,13 +21,10 @@
       <ul class="nav navbar-nav">
         <li><a>&nbsp;&nbsp;<span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu Principal <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">MENU PRINCIPAL<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="{{ route('admin.clientes') }}">Clientes</a></li>
             
-            <li class="divider"></li>
-            <li><a href="#">Cotações</a></li>
-
             <li class="divider"></li>
             <li><a href="#">Rastreabilidade</a></li>
             
@@ -36,7 +33,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu Administração <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">MENU ADMINISTRAÇÃO<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="{{ route('admin.usuarios') }}">Usuários</a></li>
             <li class="divider"></li>
@@ -61,7 +58,6 @@
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
        
-          
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->

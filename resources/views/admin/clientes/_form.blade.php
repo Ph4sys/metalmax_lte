@@ -51,6 +51,17 @@
 						<input id="iest" type="text" name="inscricao" class="form-control" value="{{ isset($registro->inscricao) ? $registro->inscricao : ''}}" placeholder="Entre com a inscrição estadual">
 					</div>
 
+					<div class="form-group">
+						<label>Tipo de Envio</label>
+						<select name="tipo_envio" class="form-control">
+						<option value=" " default> </option>
+							<option value="Carro Metalmax" {{(isset($registro->tipo_envio) && $registro->tipo_envio == "Carro Metalmax" ? 'selected' : '')}}>Carro Metalmax</option>
+					        <option value="Transportadora" {{(isset($registro->tipo_envio) && $registro->tipo_envio == "Transportadora" ? 'selected' : '')}}>Transportadora</option>
+							<option value="Sedex" {{(isset($registro->tipo_envio) && $registro->tipo_envio == "sedex" ? 'selected' : '')}}>Sedex</option>
+							<option value="Retirar" {{(isset($registro->tipo_envio) && $registro->tipo_envio == "retirar" ? 'selected' : '')}}>Retirar</option>
+						</select>
+					</div>
+
 		          <!-- /.form-group -->
 		        </div>
 		        <!-- /.col -->
@@ -100,10 +111,11 @@
 						<label>Responsável Metalmax</label>
 						<input type="text" name="responsavel" class="form-control" value="{{ isset($registro->responsavel) ? $registro->responsavel : ''}}" placeholder="Responsável atender a empresa">
 					</div>
-		
+					<div class="form-group">
+						<label>Observação</label>
+						<input type="text" name="observacao" class="form-control" value="{{ isset($registro->observacao) ? $registro->observacao : ''}}" placeholder="observação sobre a empresa">
+					</div>
 				</div>
-	     		
-			<!-- -->
 	     	</div> 
 	    </div>
 	   </div>

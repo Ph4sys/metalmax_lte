@@ -24,7 +24,6 @@
 		@include('admin.pedidos._form')
 
 		<button class="btn btn-primary">Adicionar</button>
-
 			
 		</form>
 			
