@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="row">
 	 	<h1>
-			Cotação
+			Pedido
 			<small>Detalhes</small>
 		</h1>
 			<!-- 
@@ -16,7 +16,7 @@
 			  <li><a href="{{ route('admin.clientes')}}"></i>Lista de Clientes</a></li>
 			  <li><a href="{{ route('admin.clientes.detalhe', $cotacao->contato->cliente->id )}}"></i> Detalhe</a></li>
 			  <li><a href="{{ route('admin.hcontatos',$cotacao->contato->id)}}"></i> Histórico Contatos</a></li>
-			  <li class="active"><a>Detalhe</a></li>
+			  <li class="active"><a>Pedido Detalhe</a></li>
 			  <!--<li class="active">Top Navigation</li> -->
 			</ol>
 		<!-- </section> -->
@@ -118,9 +118,13 @@
 					    	<label>Quantidade Itens</label>
 							<input type="text" name="qtd_itens" class="form-control" value="{{ $pedido->qtd_itens}}">
 					    </div>
-					     <div class="form-group col-xs-6 col-md-3">
+						<div class="form-group col-xs-6 col-md-3">
 					    	<label>Valor Total Pedido</label>
-							<input type="text" name="valor_total" class="form-control" value="{{ $pedido->valor_pedido }}">
+							<input type="text" name="valor_total" class="dinheiro form-control" value="{{ $pedido->valor_pedido }}">
+					    </div>
+						<div class="form-group col-xs-6 col-md-3">
+					    	<label>Pedido Confirmado</label>
+							<input type="text" name="confirmacao_pedido" class="form-control" value="{{ $pedido->confirmacao_pedido }}">
 					    </div>
 					</div>
 					
@@ -150,10 +154,10 @@
 							
 						<div class="row">
 							<div class="  col-sm-12">
-			      				<b>Observação - Comentários </b>
+			      				<b>Condições de Pagamento: </b>
 		      				</div>
 		      				<div class="divCaixaLinha_pedido">
-		      					{{ $cotacao->observacao }}
+		      					{{ $cotacao->tolerancia }}
 		      				</div>
 						</div>
 					

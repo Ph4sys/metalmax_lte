@@ -107,8 +107,10 @@ class ClienteController extends Controller
         $cliente = Cliente::find($id);
         //$transportadoras= $cliente->transportadoras;
        
-        $transportadoras = $cliente->transportadoras()->orderBy('created_at','desc')->paginate(1);
-        $contatos = $cliente->contatos()->orderBy('created_at','desc')->paginate(2);
+        //$transportadoras = $cliente->transportadoras()->orderBy('created_at','desc')->paginate(1);
+        $transportadoras = $cliente->transportadoras;
+        //$contatos = $cliente->contatos()->orderBy('created_at','desc')->paginate(2);
+        $contatos = $cliente->contatos;
 
         
         /*
@@ -158,6 +160,8 @@ class ClienteController extends Controller
         $registro->cidade_id = $dados['cidade_id'];
         $registro->bairro_id = $dados['bairro_id'];
         $registro->estado_id = $dados['estado_id'];
+        $registro->tipo_envio = $dados['tipo_envio'];
+        $registro->observacao = $dados['observacao'];
 
         $registro->save();
 
@@ -201,6 +205,8 @@ class ClienteController extends Controller
         $registro->cidade_id = $dados['cidade_id'];
         $registro->bairro_id = $dados['bairro_id'];
         $registro->estado_id = $dados['estado_id'];
+        $registro->tipo_envio = $dados['tipo_envio'];
+        $registro->observacao = $dados['observacao'];
 
 		$registro->nome = $dados['nome'];
         //dd($registro->credito);

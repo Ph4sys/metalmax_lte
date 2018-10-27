@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pedido extends Model{
 
-	protected $fillable = ['cotacao_id', 'situacao_pedido_id', 'contato_id', 'numero_pedido', 'numero_nf','valor_pedido','qtd_itens'];
+	protected $fillable = ['cotacao_id', 'situacao_pedido_id', 'contato_id', 'numero_pedido', 
+		'numero_nf','valor_pedido','qtd_itens', 'confirmacao_pedido', 'ordem_compra'];
 
     public function cotacoes()
     {

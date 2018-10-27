@@ -1,8 +1,5 @@
-<div class="box-body">
-  	<div class="box-body">
-  		
-  		<form action="{{route('admin.clientes.busca')}}">
 
+  		<form action="{{route('admin.clientes.busca')}}">
 	        <table id="products-table" class="table table-bordered">
 	        	<tbody>
 	        		<tr>
@@ -53,12 +50,10 @@
 	        		</tr>
 	        		<tr>
 	        			<td>
-	        				<a class="btn btn-primary" alt="Adicionar novo cliente" href="{{route('admin.clientes.adicionar')}}">Adicionar Novo</a>	
+	        				<a class="btn btn-primary" alt="Adicionar novo cliente" href="{{route('admin.clientes.adicionar')}}">+ Novo Cliente</a>	
 	        			</td>
 	        		</tr>		
 	        	</tbody>		
 	        	<tfoot></tfoot>		
 			</table>
-		</form>	
-	</div>
-</div>
+		</form>

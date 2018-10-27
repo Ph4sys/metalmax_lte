@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     //Relacionamentos Cliente -> 1
-
+    protected $fillable = ['nome','cnpj','classe','situacao','cidade'];
+    
     public function situacao()
     {
     	return $this->belongsTo('App\SituacaoCliente','situacao_id');

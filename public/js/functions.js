@@ -41,4 +41,163 @@
 
 $(document).ready(function(){
     $("input.dinheiro").maskMoney({showSymbol:true, symbol:"R$", decimal:",", thousands:"."});
+    //Cliente Table 
+    $('#tableClientes').DataTable({
+        'paging'      : true,
+        'lengthChange': true,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false,
+        'pageLength':10,
+        "oLanguage": {
+          "sSearch": "Apply filter _INPUT_ to table",
+          "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros",
+          "sLengthMenu": 'Mostrar <select>'+
+            '<option value="2">2</option>'+
+            '<option value="3">3</option>'+
+            '<option value="4">4</option>'+
+            '<option value="5">5</option>'+
+            '<option value="8">8</option>'+
+            '<option value="10">10</option>'+
+            '<option value="20">20</option>'+
+            '<option value="-1">All</option>'+
+            '</select> registros',
+          "oPaginate": {
+            "sNext": ">",
+            "sPrevious": "<"
+          }
+        }
+    });
+    $('#tableContatos').DataTable({
+        'paging'      : true,
+        'lengthChange': true,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false,
+        'pageLength':3,
+        "order": [[ 0, 'desc' ]],
+        "oLanguage": {
+          "sSearch": "Apply filter _INPUT_ to table",
+          "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros",
+          "sLengthMenu": 'Mostrar <select>'+
+            '<option value="2">2</option>'+
+            '<option value="3">3</option>'+
+            '<option value="4">4</option>'+
+            '<option value="5">5</option>'+
+            '<option value="8">8</option>'+
+            '<option value="10">10</option>'+
+            '<option value="20">20</option>'+
+            '<option value="-1">All</option>'+
+            '</select> registros',
+          "oPaginate": {
+            "sNext": ">",
+            "sPrevious": "<"
+          }
+        }
+    });
+    $('#tableTransportadoras').DataTable({
+        'paging'      : true,
+        'lengthChange': true,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false,
+        'pageLength':1,
+        "order": [[ 0, 'desc' ]],
+        "oLanguage": {
+          "sSearch": "Apply filter _INPUT_ to table",
+          "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros",
+          "sLengthMenu": 'Mostrar <select>'+
+            '<option value="1">1</option>'+
+            '<option value="-1">All</option>'+
+            '</select> registros',
+          "oPaginate": {
+            "sNext": ">",
+            "sPrevious": "<"
+          }
+        }
+    });
+    $('#tableHContatos').DataTable({
+        'paging'      : true,
+        'lengthChange': true,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false,
+        'pageLength':3,
+        "order": [[ 0, 'desc' ]],
+        "oLanguage": {
+          "sSearch": "Apply filter _INPUT_ to table",
+          "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros",
+          "sLengthMenu": 'Mostrar <select>'+
+            '<option value="1">1</option>'+
+            '<option value="2">2</option>'+
+            '<option value="3">3</option>'+
+            '<option value="4">4</option>'+
+            '<option value="6">6</option>'+
+            '<option value="8">8</option>'+
+            '<option value="-1">All</option>'+
+            '</select> registros',
+          "oPaginate": {
+            "sNext": ">",
+            "sPrevious": "<"
+          }
+        }
+    });
+    $('#tableHCotacoes').DataTable({
+        'paging'      : true,
+        'lengthChange': true,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false,
+        'pageLength':3,
+        "order": [[ 0, 'desc' ]],
+        "oLanguage": {
+          "sSearch": "Apply filter _INPUT_ to table",
+          "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros",
+          "sLengthMenu": 'Mostrar <select>'+
+            '<option value="1">1</option>'+
+            '<option value="2">2</option>'+
+            '<option value="3">3</option>'+
+            '<option value="4">4</option>'+
+            '<option value="6">6</option>'+
+            '<option value="8">8</option>'+
+            '<option value="-1">All</option>'+
+            '</select> registros',
+          "oPaginate": {
+            "sNext": ">",
+            "sPrevious": "<"
+          }
+        }
+    });
+    $('#tableHPedidos').DataTable({
+        'paging'      : true,
+        'lengthChange': true,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false,
+        'pageLength':3,
+        "order": [[ 0, 'desc' ]],
+        "oLanguage": {
+          "sSearch": "Apply filter _INPUT_ to table",
+          "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros",
+          "sLengthMenu": 'Mostrar <select>'+
+            '<option value="1">1</option>'+
+            '<option value="2">2</option>'+
+            '<option value="3">3</option>'+
+            '<option value="4">4</option>'+
+            '<option value="6">6</option>'+
+            '<option value="8">8</option>'+
+            '<option value="-1">All</option>'+
+            '</select> registros',
+          "oPaginate": {
+            "sNext": ">",
+            "sPrevious": "<"
+          }
+        }
+    });
 });

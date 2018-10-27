@@ -38,8 +38,8 @@
 		        		<tr>		   
 		        			<td><input type="text" name="item_desc[]" class="form-control" value="{{$item->item_desc }}"></td>
 		        			<td><input type="text" name="quantidade" class="form-control" value="{{$item->quantidade }}"></td>
-					    	<td><input type="text" name="unidade" class="form-control" value="{{$item->unidade }}"></td>
-					    	<td><input type="text" name="valor" class="form-control" value="{{$item->valor }}"></td>
+					    		<td><input type="text" name="unidade" class="form-control" value="{{$item->unidade }}"></td>
+					    		<td><input type="text" name="valor" class="dinheiro form-control" value="{{$item->valor }}"></td>
 		        		</tr>
 	        			@endforeach
 		        	</tbody>		
@@ -51,6 +51,10 @@
 				<div class="row">
 				    <div class="form-group col-xs-12 col-md-12">
 			    		<label>Observação - Comentários</label>
+						<textarea type="text" name="observacao" class="form-control">{{ isset($cotacao->observacao) ? $cotacao->observacao : ''}}</textarea>
+			    	</div>
+						<div class="form-group col-xs-12 col-md-12">
+			    		<label>Pedido - Confirmado?</label>
 						<textarea type="text" name="observacao" class="form-control">{{ isset($cotacao->observacao) ? $cotacao->observacao : ''}}</textarea>
 			    	</div>
 				</div>

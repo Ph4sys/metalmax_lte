@@ -8,11 +8,11 @@
 			  	<div class="row">
 				    <div class="form-group col-xs-6 col-md-6">
 				    	<label>Nome Contato</label>
-						<input type="text" name="contato_id" class="form-control" value="{{ $contato->nome }}" disabled>
+						<input type="text" name="contato_id" class="form-control" value="{{ $contato->nome }}" readonly>
 				    </div>
 				    <div class="form-group col-xs-6 col-md-6">
 				    	<label>Responsável Metalmax</label>
-						<input type="text" name="nome_contato_metal" class="form-control" value="{{ Auth::user()->name }}" disabled>
+						<input type="text" name="nome_contato_metal" class="form-control" value="{{ Auth::user()->name }}" readonly>
 				    </div>
 				</div>
 				<div class="row">

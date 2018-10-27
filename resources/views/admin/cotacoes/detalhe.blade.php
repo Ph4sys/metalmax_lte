@@ -127,7 +127,7 @@
 					      				<b>Contato Metalmax: </b>{{ Auth::user()->name }}
 				      				</div>
 									<div class="divCaixa col-sm-4">
-					      				<b>Tol./AC.: </b>{{ $cotacao->tolerancia }}
+					      				<b>Condições de Pagamento: </b>{{ $cotacao->tolerancia }}
 				      				</div>
 								</div>
 									

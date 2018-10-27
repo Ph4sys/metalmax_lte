@@ -21,7 +21,6 @@ class ContatoController extends Controller
         return view('admin.contatos.adicionar', compact('cliente'));
     }
 
-
     public function salvar(Request $request, $id)
     {
         $contato = new Contato;
@@ -30,10 +29,9 @@ class ContatoController extends Controller
         $contato->email = $request->input('email');
         $contato->telefone = $request->input('telefone');
         $contato->celular = $request->input('celular');
-        
+        $contato->cargo = $request->input('cargo');
 
         Cliente::find($id)->addContato($contato);
-        
         \Session::flash('mensagem',['msg'=>'Contato adicionado com sucesso!','class'=>'alert alert-success alert-dismissible']);
 
         return redirect()->route('admin.clientes.detalhe',$id);
@@ -41,14 +39,12 @@ class ContatoController extends Controller
 
     public function editar($id)
     {
-        $contato = Contato::find($id);
-        
+        $contato = Contato::find($id);     
         if(!$contato)
         {
             \Session::flash('flash_message',['msg'=>'Não existe esse contato!','class'=>'alert alert-danger alert-dismissible']);
             return redirect()->route('admin.clientes.detalhe', $contato->cliente->id);
         }
-
         return view('admin.contatos.editar', compact('contato'));
     }
 
