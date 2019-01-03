@@ -134,6 +134,5 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::put('/admin/situacoes_pedido/atualizar/{id}',['as'=>'admin.situacoes_pedido.atualizar', 'uses'=>'Admin\SituacaoPedidoController@atualizar']);
 	Route::get('/admin/situacoes_pedido/deletar/{id}',['as'=>'admin.situacoes_pedido.deletar', 'uses'=>'Admin\SituacaoPedidoController@deletar']);
 
-
 });
 

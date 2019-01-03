@@ -4,34 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="{{ asset('lib/bootstrap/dist/css/bootstrap.min.css') }}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="{{ asset('lib/Ionicons/css/ionicons.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('lib/admin-lte/dist/css/AdminLTE.min.css') }}">
-    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-          page. However, you can choose any other skin. Make sure you
-          apply the skin class to the body tag so the changes take effect. -->
-    <link rel="stylesheet" href="{{ asset('lib/admin-lte/dist/css/skins/skin-blue.min.css') }}">
-    
-    <!--link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css"-->
-    
-    <!--link rel="stylesheet" href="{{ asset('lib/select2/dist/css/select2.min.css') }}"-->
-    
-    <!--link rel="stylesheet" href="{{ asset('lib/admin-lte/dist/css/alt/AdminLTE-select2.min.css') }}"-->
-
-    <link rel="stylesheet" href="{{ asset('lib/select2/dist/css/select2.min.css')}}">
-
-    
-    
+    <!--link rel="stylesheet" type="text/css" media="screen" href="lib/main.css" /-->
+    <link rel="stylesheet" href="{{ asset('lib/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/bower_components/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/bower_components/Ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/bower_components/admin-lte/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/bower_components/admin-lte/dist/css/skins/_all-skins.min.css') }}">
     <!-- App CSS Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-     
 </head>
 
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
@@ -61,7 +42,7 @@
                   </div>
                 </div>
               @endif
-              
+         
               @yield('content')
             </main>
           </section>
@@ -81,29 +62,20 @@
     <script src="{{ asset('lib/jquery/dist/jquery.min.js')}}"></script>
     <script src="{{ asset('lib/jquery/dist/jquery.mask.min.js')}}"></script>
     <script src="{{ asset('lib/jquery/dist/mask.js')}}"></script>
-    <script src="{{ asset('lib/jquery/dist/jquery.maskMoney.js')}}"></script>
-    
+    <script src="{{ asset('lib/jquery/dist/jquery.maskMoney.js')}}"></script> 
     <script src="{{ asset('js/functions.js')}}"></script>
      
-    <!-- 
-    
-    <script src="{{ asset('lib/jquery/dist/mask.js')}}"></script>
-    <script src="{{ asset('lib/jquery/dist/jquery.mask.min.js')}}"></script>
-    <script src="{{ asset('lib/jquery/dist/validate.js')}}"></script>
-    
-    <script src="{{ asset('lib/jquery/dist/jquery.validate.min.js')}}"></script>
-    <script src="{{ asset('lib/jquery/dist/additional-methods.min.js')}}"></script>
-    <script src="{{ asset('lib/jquery/dist/localization/messages_pt_BR.min.js')}}"></script>
-    <script src="{{ asset('lib/jquery/dist/holder.min.js')}}"></script>
-    <script src="{{ asset('lib/jquery/dist/localfilereader.js')}}"></script>
-    -->
-
-    <!-- Bootstrap 3.3.7 -->
-    <script src="{{ asset('lib/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset('lib/admin-lte/dist/js/adminlte.min.js')}}"></script>
-    <!-- Select2  -->
-    <script src="{{ asset('lib/select2/dist/js/select2.full.min.js')}}"></script>
+    <!--script src="{{ asset ('lib/bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/jquery/dist/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/jquery/dist/mask.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/jquery/dist/maskMoney.js') }}"></script-->
+    <script src="{{ asset ('lib/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/fastclick/lib/fastclick.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/admin-lte/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset ('lib/bower_components/admin-lte/dist/js/demo.js') }}"></script>
 
 </body>
 </html>

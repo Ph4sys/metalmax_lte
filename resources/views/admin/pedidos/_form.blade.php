@@ -45,10 +45,15 @@
 				    </div>
 				     <div class="form-group col-xs-6 col-md-3">
 				    	<label>Valor Total Pedido</label>
-						<input type="text" name="valor_total" class="form-control" value="{{ $pedido->valor_pedido }}">
+						<input type="text" name="valor_total" class="dinheiro form-control" value="{{ $pedido->valor_pedido }}">
 				    </div>
 				</div>
-				
+				<div class="row">
+				<div class="form-group col-xs-6 col-md-3">
+				    	<label>Ordem Compra (P.C.)</label>
+						<input type="text" name="ordem_compra" class="form-control" value="{{ $pedido->ordem_compra}}">
+				    </div>
+				</div>
 				<div>
 					<h4 class="box-title">Itens do Pedido</h4>
 					<table id="products-table" class="table table-bordered col-sm-8">
@@ -74,14 +79,24 @@
 					</table>
 						
 					<div class="row">
-						<div class="  col-sm-12">
-		      				<b>Observação - Comentários </b>
-	      				</div>
-	      				<div class="divCaixaLinha_pedido">
-	      					{{ $cotacao->observacao }}
-	      				</div>
+						<div class="  col-sm-6">
+		      				<b>Condições de Pagamento</b>
+						</div>
+						<div class="divCaixaLinha_pedido">
+	      					{{ $cotacao->tolerancia }}
+						</div>	
 					</div>
-				
+
+					<div class="row">
+						<div class="  col-sm-3">
+						<label>Pedido Confirmado?</label>
+						<select name="confirmacao_pedido" class="form-control">
+									 	<option value="não" {{(isset($pedido->confirmacao_pedido) && $pedido->confirmacao_pedido == 'nao'  ? 'selected' : '')}}>Não</option>
+										<option value="sim" {{(isset($pedido->confirmacao_pedido) && $pedido->confirmacao_pedido == 'sim'  ? 'selected' : '')}}>Sim</option>
+				 		</select>
+						</div>	
+					</div>
+                  
 				</div>
 
 			</div>

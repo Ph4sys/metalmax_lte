@@ -24,7 +24,11 @@
 				<div class="row">
 				    <div class="form-group col-xs-8 col-md-12">
 				    	<label>E-mail</label>
-						<input type="email" name="email" class="form-control" value="{{ isset($contato->email) ? $contato->email : ''}}" placeholder="Entre com a sigla do estado">
+							<input type="email" name="email" class="form-control" value="{{ isset($contato->email) ? $contato->email : ''}}" placeholder="Entre com email do contato">
+				    </div>
+						<div class="form-group col-xs-8 col-md-12">
+				    	<label>Cargo</label>
+							<input type="text" name="cargo" class="form-control" value="{{ isset($contato->cargo) ? $contato->cargo : ''}}" placeholder="Entre com a cargo do contato">
 				    </div>
 				</div>
 			  

@@ -79,7 +79,12 @@ class CotacaoController extends Controller
         $contato = $cotacao->contato;
         //dd($cotacao->tolerancia);
         $itens_cotacao = $cotacao->itensCotacao;
-        //dd($cotacao->contato->id);  //dd($cotacao->contato->cliente->id);
+
+        for($i = 0; $i<count($itens_cotacao); $i++){ 
+            $itens_cotacao[$i]->valor = number_format($itens_cotacao[$i]->valor, 2, ',', '.');
+        }
+
+        //dd($itens_cotacao); //dd($cotacao->contato->id);  //dd($cotacao->contato->cliente->id);
 
         return view('admin.cotacoes.editar', compact('cotacao','itens_cotacao', 'contato'));
     }
@@ -90,7 +95,6 @@ class CotacaoController extends Controller
         $itens_cotacao = $cotacao->ItensCotacao()->get();
 
         //dd($itens_cotacao[1]->id);
-
 
         $cotacao->tolerancia = $request->input('tolerancia');
         $cotacao->observacao = $request->input('observacao');
@@ -105,8 +109,8 @@ class CotacaoController extends Controller
         $numItensForm = count($dados)/4;
         
         //dd($dados);
-
         $array_div= array_chunk($dados, 4);
+        
         //dd($array_div);
 
         if( $numItens == $numItensForm ){

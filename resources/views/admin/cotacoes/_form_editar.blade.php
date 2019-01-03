@@ -28,13 +28,13 @@
 		        			<th>Unidade</th> 
 		        			<th>Valor</th>
 		        		</tr>
-						@foreach($itens_cotacao as $item)
-		        		<tr>		   
-		        			<td><input type="text" name="item_desc[]" class="form-control" value="{{$item->item_desc }}"></td>
-		        			<td><input type="text" name="quantidade" class="form-control" value="{{$item->quantidade }}"></td>
-					    	<td><input type="text" name="unidade" class="form-control" value="{{$item->unidade }}"></td>
-					    	<td><input type="text" name="valor" class="form-control" value="{{$item->valor }}"></td>
-		        		</tr>
+								@foreach($itens_cotacao as $item)
+									<tr>		   
+										<td><input type="text" name="item_desc[]" class="form-control" value="{{$item->item_desc }}"></td>
+										<td><input type="text" name="quantidade" class="form-control" value="{{$item->quantidade }}"></td>
+										<td><input type="text" name="unidade" class="form-control" value="{{$item->unidade }}"></td>
+										<td><input type="text" name="valor" class="form-control" value="{{$item->valor }}"></td>
+									</tr>
 	        			@endforeach
 		        	</tbody>		
 		        	<tfoot>		 

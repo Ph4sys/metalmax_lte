@@ -13,7 +13,8 @@ class ClasseClienteController extends Controller
 {
     public function index()
     {
-        $registros = ClasseCliente::orderBy('classe')->paginate(10);
+        //$registros = ClasseCliente::orderBy('classe')->paginate(10);
+        $registros = ClasseCliente::all();
         return view('admin.classes.index',compact('registros'));
     }
  
@@ -47,7 +48,7 @@ class ClasseClienteController extends Controller
         $registro = ClasseCliente::find($id);
         $dados = $request->all();
 
-		$registro->classe = $dados['classe'];
+        $registro->classe = $dados['classe'];
        
         $registro->update();
 

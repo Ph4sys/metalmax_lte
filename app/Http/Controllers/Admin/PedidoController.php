@@ -49,8 +49,10 @@ class PedidoController extends Controller
         $cotacao = Cotacao::find($pedido->cotacao_id);
         $itens_cotacao = $cotacao->itensCotacao()->get();
         $situacoes = SituacaoPedido::orderBy('situacao_pedido')->get();
+        
+        $pedido->valor_pedido= number_format($pedido->valor_pedido, 2, ',', '.');
 
-        //dd($cliente->nome);
+        //dd($pedido);
         //dd($situacoes[0]->situacao_pedido);
         //dd($cliente->situacao->situacao_id);
 
@@ -58,6 +60,7 @@ class PedidoController extends Controller
 
     }
 
+    //Gerar pedido
     public function adicionar($id)
     {
         $cotacao= Cotacao::find($id);
@@ -79,6 +82,8 @@ class PedidoController extends Controller
         }
 
         $pedido->valor_pedido = $soma;
+        
+        //dd($soma);
        
         return view('admin.pedidos.adicionar', compact('cotacao','contato','cliente','itens_cotacao','pedido', 'situacoes'));
     }
@@ -111,6 +116,16 @@ class PedidoController extends Controller
         $itens_cotacao = $cotacao->itensCotacao;
         $contato = Contato::find($pedido->contato_id);
         $situacoes = SituacaoPedido::all();
+        $valorTotalpedido = 0;
+        
+        //dd( $itens_cotacao[0]->valor);
+
+        for($i = 0; $i<count($itens_cotacao); $i++){ 
+            $valorTotalpedido += $itens_cotacao[$i]->valor;
+            $itens_cotacao[$i]->valor = number_format($itens_cotacao[$i]->valor, 2, ',', '.');
+        }
+
+        $pedido->valor_pedido = number_format($valorTotalpedido, 2, ',', '.');
 
         return view('admin.pedidos.editar', compact('pedido', 'cotacao', 'contato', 'itens_cotacao', 'situacoes'));
     }
@@ -126,6 +141,7 @@ class PedidoController extends Controller
         $pedido->situacao_pedido_id = $request->input('situacao_pedido');
         $pedido->valor_pedido = $request->input('valor_total');
         $pedido->qtd_itens = $request->input('qtd_itens');
+        $pedido->confirmacao_pedido = $request->input('confirmacao_pedido');
 
         //dd($pedido);
 
