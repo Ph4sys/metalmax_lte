@@ -200,4 +200,29 @@ $(document).ready(function(){
           }
         }
     });
+  
+    $('#contatosClientes').DataTable( {
+      "scrollY":        "80px",
+      "scrollCollapse": true,
+      "paging":         false,
+      'searching'   : false,
+      'ordering'    : true,
+      "oLanguage": {
+        "sSearch": "Apply filter _INPUT_ to table",
+        "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
+      }
+    } );
+    
+    $('#pedidosNconfirmados').DataTable( {
+          "scrollY":        "80px",
+          "scrollCollapse": true,
+          "paging":         false,
+          'searching'   : false,
+          'ordering'    : true,
+          "oLanguage": {
+            "sSearch": "Apply filter _INPUT_ to table",
+            "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
+          }
+    } );
+
 });
