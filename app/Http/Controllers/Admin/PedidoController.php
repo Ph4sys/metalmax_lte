@@ -50,9 +50,11 @@ class PedidoController extends Controller
         $itens_cotacao = $cotacao->itensCotacao()->get();
         $situacoes = SituacaoPedido::orderBy('situacao_pedido')->get();
         
+        //dd($pedido->valor_pedido);
+
         $pedido->valor_pedido= number_format($pedido->valor_pedido, 2, ',', '.');
 
-        //dd($pedido);
+       
         //dd($situacoes[0]->situacao_pedido);
         //dd($cliente->situacao->situacao_id);
 

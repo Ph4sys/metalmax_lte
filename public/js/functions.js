@@ -213,16 +213,75 @@ $(document).ready(function(){
       }
     } );
     
-    $('#pedidosNconfirmados').DataTable( {
-          "scrollY":        "80px",
+    $('#TableContatos').DataTable( {
+          "scrollY":        "100px",
           "scrollCollapse": true,
-          "paging":         false,
-          'searching'   : false,
-          'ordering'    : true,
+          "paging": false,
+          'searching': true,
+          'ordering': true,
           "oLanguage": {
-            "sSearch": "Apply filter _INPUT_ to table",
+            "sSearch": "Buscar _INPUT_ ",
             "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
           }
     } );
 
+    $('#TableHContatos').DataTable( {
+      "scrollY":        "100px",
+      "scrollCollapse": true,
+      "paging": false,
+      'searching': true,
+      'ordering': true,
+      "oLanguage": {
+        "sSearch": "Buscar _INPUT_ ",
+        "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
+      }
+    } );
+
+    $('#TableHContacoes').DataTable( {
+      "scrollY":        "100px",
+      "scrollCollapse": true,
+      "paging": false,
+      'searching': true,
+      'ordering': true,
+      "oLanguage": {
+        "sSearch": "Buscar _INPUT_ ",
+        "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
+      }
+    } );
+
+    $('#TableHPedidos').DataTable( {
+      "scrollY":        "100px",
+      "scrollCollapse": true,
+      "paging": false,
+      'searching': true,
+      'ordering': true,
+      "oLanguage": {
+        "sSearch": "Buscar _INPUT_ ",
+        "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
+      }
+    } );
+
+    $('#TableAdmUser').DataTable( {
+      "scrollY":        "350px",
+      "scrollCollapse": true,
+      "paging": false,
+      'searching': true,
+      'ordering': true,
+      "oLanguage": {
+        "sSearch": "Buscar _INPUT_ ",
+        "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
+      }
+    } );
+
+    $('#TableClientePrinc').DataTable( {
+      "scrollY": "300px",
+      "scrollCollapse": true,
+      "paging": false,
+      'searching': false,
+      'ordering': true,
+      "oLanguage": {
+        "sSearch": "Buscar _INPUT_ ",
+        "sInfo": "Mostrando _START_ to _END_ of _TOTAL_ registros"
+      }
+    } );
 });

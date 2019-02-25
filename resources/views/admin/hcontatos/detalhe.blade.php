@@ -64,6 +64,7 @@
 		<!-- /.box-body -->
 		</div>
   	</div>
+	<!--
   	<div class="col-xs-12">
   		<div class="box">
 			<div class="box-header">
@@ -116,7 +117,6 @@
 				            	</tbody>
 				            	<tfoot>      		
 					            </tfoot>
-								<!-- /.BOTAO ADICIONAR-->
 					        </table>
 						    <div>
 								<a class="btn btn-primary" href="{{route('admin.contatos.adicionar',$cliente->id)}}">Adicionar Contato</a>
@@ -127,7 +127,7 @@
 			</div>
   		</div>
 	</div>
-
+	-->
 	<div class="col-xs-12">
   		<div class="box">
 			<div class="box-header">
